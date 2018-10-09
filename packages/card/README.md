@@ -15,10 +15,10 @@
 
 ```html
 <van-card
-  title="标题"
-  desc="描述"
   num="2"
   price="2.00"
+  desc="描述信息"
+  title="商品标题"
   thumb="{{ imageURL }}"
 />
 ```
@@ -28,10 +28,11 @@
 
 ```html
 <van-card
-  title="标题"
-  desc="描述"  
   num="2"
+  tag="标签"
   price="2.00"
+  desc="描述信息"
+  title="商品标题"
   thumb="{{ imageURL }}"
 >
   <view slot="footer">
@@ -48,10 +49,14 @@
 | thumb | 左侧图片 | `String` | - |
 | title | 标题 | `String` | - |
 | desc | 描述 | `String` | - |
+| tag | 标签 | `String` | - |
 | num | 商品数量 | `String | Number` | - |
 | price | 商品价格 | `String | Number` | - |
 | centered | 内容是否垂直居中 | `String` | `false` |
 | currency | 货币符号 |  `String` | `¥` |
+| thumb-link | 点击左侧图片后的跳转链接 | `String` | - |
+| link-type | 链接跳转类型，可选值为 `redirectTo` `switchTab` `reLaunch` | `String` | `navigateTo` |
+| lazy-load | 是否开启图片懒加载 | `String` | `false` |
 
 ### Slot
 
@@ -81,3 +86,6 @@
 | 0.0.1 | feature | 新增组件 |
 | 0.3.0 | bugfix | 修复 currency 默认值不生效的问题 |
 | 0.3.3 | bugfix | 修复 centered 属性不生效的问题 |
+| 0.3.7 | feature | 新增 tag 属性 |
+| 0.3.7 | feature | 新增 link-type 属性 |
+| 0.3.7 | feature | 新增 thumb-link 属性 |
